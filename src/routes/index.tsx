@@ -1,13 +1,21 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { Link } from "@builder.io/qwik-city";
+import { Link, Form } from "@builder.io/qwik-city";
+
+import { useAuthSignin } from "./plugin@auth";
 
 export default component$(() => {
+  const action = useAuthSignin();
+
   return (
     <div>
       <h1>
         Welcome to Qwik <span class="lightning">⚡️</span>
       </h1>
+
+      <Form action={action}>
+        <button type="submit">sign in</button>
+      </Form>
 
       <ul>
         <li>
