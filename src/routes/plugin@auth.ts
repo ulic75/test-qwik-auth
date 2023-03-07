@@ -1,4 +1,5 @@
 import { serverAuth$ } from '@builder.io/qwik-auth';
+// import { serverAuth$ } from '~/lib/auth';
 import GitHub from '@auth/core/providers/github';
 import type { Provider } from '@auth/core/providers';
 
